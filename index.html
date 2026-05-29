@@ -865,9 +865,15 @@ function setTab(tab, el) {
     _sidePanel.style.display = "none";
     scrollBottom();
   } else if (tab === "records") {
-    renderRecordsPanel(main);
-  } else if (tab === "stats") {
+    renderRecordsPanel(  } else if (tab === "stats") {
     renderStatsPanel(main);
+  } else if (tab === "summary") {
+    main.innerHTML = "";
+    _sidePanel.style.display = "flex";
+    _sidePanel.style.width = "100%";
+    _sidePanel.style.maxWidth = "480px";
+    _sidePanel.style.margin = "0 auto";
+    main.appendChild(_sidePanel);
   }
 }
 
